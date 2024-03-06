@@ -1,0 +1,44 @@
+.row {
+    margin-left: 20px;
+    color: white;
+}
+
+.row_posters {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.row_poster {
+    object-fit: contain;
+    /*keeps the aspect ratio*/
+    /* width: 100%; */
+    /*This (width:100%) is making the whole images fit into the screen. If we enable it the x-scroll bar won't appear*/
+    max-height: 100px;
+    margin-right: 3px;
+    /*transition: border 300ms; //In transition we add the value whichever we want to be dalayed. Here we're specifying 'border' 
+    So This will make changing of border a littlebit late. IF we specify all then all the values will be delayed*/
+    transition: transform 300ms;
+    /*Here we're specifying delay in 'transform' property to '300ms'. this is for making the zoom delay whenever we perform any animation on it i.e. scale(1.08)*/
+    padding: 10px;
+}
+
+.row_poster:hover {
+    transform: scale(1.08);
+    /* This will zoom a littlebit when we hover over it*/
+    /* border: 5px solid black; */
+}
+
+.row_poster_large {
+    max-height: 250px;
+}
+
+.row_poster_large:hover {
+    transform: scale(1.09);
+}

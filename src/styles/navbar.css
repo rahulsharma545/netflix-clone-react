@@ -1,0 +1,19 @@
+.navbar-container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    /*width is important else the items will stick to the left*/
+    justify-content: space-between;
+
+}
+
+.netflix-logo {
+    padding: 0 1rem;
+    width: 80px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav_black {
+    background-color: rgba(17, 17, 17, 0.8);
+}
